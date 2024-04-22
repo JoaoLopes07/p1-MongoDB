@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h1>Bem-vindo à Página Inicial</h1>
+    
+    <h2>Novo Setor</h2>
+    <form action="/novo_setor" method="POST">
+        <label for="nome">Nome do Setor:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+        <input type="submit" value="Criar Setor">
+    </form>
+
+
+    <h1>Criar Cargo</h1>
+
+    <form action="/novo_cargo" method="post">
+        <label for="nome_cargo">Nome do Cargo:</label>
+        <input type="text" name="nome_cargo" required>
+        <input type="submit" value="Adicionar Cargo">
+    </form>
+
+    <h2>Novo Funcionário</h2>
+    <form action="/novo_funcionario" method="POST">
+        <label for="primeiro_nome">Primeiro Nome:</label>
+        <input type="text" id="primeiro_nome" name="primeiro_nome" required><br>
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" required><br>
+        <label for="data_admissao">Data de Admissão:</label>
+        <input type="date" id="data_admissao" name="data_admissao" required><br>
+        <label for="status_funcionario">Status do Funcionário:</label>
+        <input type="text" id="status_funcionario" name="status_funcionario" required><br>
+        <label for="id_setor">ID do Setor:</label>
+        <input type="number" id="id_setor" name="id_setor" required><br>
+        <label for="id_cargo">ID do Cargo:</label>
+        <input type="number" id="id_cargo" name="id_cargo" required><br><br>
+        <input type="submit" value="Criar Funcionário">
+    </form>
+</body>
+</html>
